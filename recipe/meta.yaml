@@ -1,5 +1,5 @@
 {% set name = "ppci" %}
-{% set version = "0.5.5" %}
+{% set version = "0.5.6" %}
 {% set   sha256 = "c134a10486f163943d74b1f89a6a7373f9a801baa5114b7079e8e9a31e8c4647" %}
 
 package:
