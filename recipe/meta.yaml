@@ -13,7 +13,7 @@ source:
 
 build:
   skip: True  # [py2k]
-  number: 1000
+  number: 1
   entry_points:
     - ppci-asm = ppci.cli.asm:asm
     - ppci-build = ppci.cli.build:build
