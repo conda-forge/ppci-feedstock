@@ -1,6 +1,6 @@
 {% set name = "ppci" %}
-{% set version = "0.5.6" %}
-{% set sha256 = "d64c169529e039a7968a95c4dfc25cd7768e6629b8dc576df5e291c9f942660e" %}
+{% set version = "0.5.7" %}
+{% set sha256 = "ef9dc403c2a3cc1b55e3174e730726f9d04b029287ff110a8417c5d2487f1d13" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   skip: True  # [py2k]
-  number: 1
+  number: 0
   entry_points:
     - ppci-asm = ppci.cli.asm:asm
     - ppci-build = ppci.cli.build:build
