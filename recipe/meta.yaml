@@ -1,6 +1,6 @@
 {% set name = "ppci" %}
-{% set version = "0.5.7" %}
-{% set sha256 = "ef9dc403c2a3cc1b55e3174e730726f9d04b029287ff110a8417c5d2487f1d13" %}
+{% set version = "0.5.8" %}
+{% set sha256 = "c4c3c2033cac5b97d994117d15e994db0fa17746a6fcd13629e1eb87e49a3934" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  skip: True  # [py2k]
+  skip: true  # [py2k]
   number: 0
   entry_points:
     - ppci-asm = ppci.cli.asm:asm
@@ -85,8 +85,8 @@ test:
 about:
   home: http://ppci.readthedocs.io/
   license: BSD-2-Clause
-  license_file: 'license.txt'
-  summary: 'A compiler for ARM, X86, MSP430, xtensa and more implemented in pure Python'
+  license_file: license.txt
+  summary: A compiler for ARM, X86, MSP430, xtensa and more implemented in pure Python
   doc_url: http://ppci.readthedocs.io/
   dev_url: https://bitbucket.org/windel/ppci
 
