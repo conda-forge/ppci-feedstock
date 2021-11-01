@@ -13,7 +13,7 @@ source:
 
 build:
   skip: true  # [py2k]
-  number: 2
+  number: 3
   entry_points:
     - ppci-asm = ppci.cli.asm:asm
     - ppci-build = ppci.cli.build:build
@@ -40,7 +40,7 @@ build:
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
   run:
