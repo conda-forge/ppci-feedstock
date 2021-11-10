@@ -1,18 +1,16 @@
 {% set name = "ppci" %}
 {% set version = "0.5.8" %}
-{% set sha256 = "c4c3c2033cac5b97d994117d15e994db0fa17746a6fcd13629e1eb87e49a3934" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  sha256: c4c3c2033cac5b97d994117d15e994db0fa17746a6fcd13629e1eb87e49a3934
 
 build:
-  skip: true  # [py2k]
+  noarch: python
   number: 3
   entry_points:
     - ppci-asm = ppci.cli.asm:asm
@@ -37,14 +35,15 @@ build:
     - ppci-wat2wasm = ppci.cli.wat2wasm:wat2wasm
     - ppci-wabt = ppci.cli.wabt:wabt
     - ppci-yacc = ppci.cli.yacc:yacc
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python
-    - setuptools
+    - python >=3.6
+    - pip
+    - flit-core
   run:
-    - python
+    - python >=3.6
     - colorama
 
 test:
